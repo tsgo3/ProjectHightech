@@ -3,12 +3,33 @@
  */
 package projecthightech;
 
+import java.sql.SQLException;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        ArticleDAO articleDAO = new ArticleDAO();
+        int id = 1;
+
+        try {
+            Article article = articleDAO.getcaracteristique(id);
+
+            if (article != null) {
+                System.out.println("Article trouvé :");
+                System.out.println("ID : " + article.getId());
+                System.out.println("Libelle : " + article.getLibelle());
+                System.out.println("Marque : " + article.getMarque());
+                System.out.println("Prix : " + article.getPrix());
+                System.out.println("Photo : " + article.getPhoto());
+                System.out.println("Catégorie : " + article.getCat().getNom());
+            } else {
+                System.out.println("Article avec ID " + id + " introuvable");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

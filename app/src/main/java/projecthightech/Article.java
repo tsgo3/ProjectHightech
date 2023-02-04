@@ -6,9 +6,9 @@ public class Article {
     private String marque;
     private double prix;
     private String photo;
-    private Catégorie cat;
+    private Categorie cat;
 
-    public Article(int id, String libelle, String marque, double prix, String photo, Catégorie cat) {
+    public Article(int id, String libelle, String marque, double prix, String photo, Categorie cat) {
         this.id = id;
         this.libelle = libelle;
         this.marque = marque;
@@ -57,13 +57,11 @@ public class Article {
         this.photo = photo;
     }
 
-    public Catégorie getCat() {
+    public Categorie getCat() {
         return cat;
     }
 
-    public void setCat(Catégorie cat) {
+    public void setCat(Categorie cat) {
         this.cat = cat;
     }
-
-
 }
