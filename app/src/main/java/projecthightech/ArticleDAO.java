@@ -14,7 +14,6 @@ public class ArticleDAO
 
         try(Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD))
         {
-            Class.forName("com.mysql.jdbc.Driver");
             String query = "SELECT * FROM articles WHERE id = ?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, id);
@@ -33,8 +32,6 @@ public class ArticleDAO
             }
         } catch (SQLException e){
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
         }
         return article;
     }
