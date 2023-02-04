@@ -7,4 +7,12 @@ public class Catégorie {
     {
         this.catégorie=c;
     }
+
+    public Catégorie getCatégorie() {
+        return catégorie;
+    }
+
+    public void setCatégorie(Catégorie catégorie) {
+        this.catégorie = catégorie;
+    }
 }

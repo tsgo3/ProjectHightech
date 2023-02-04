@@ -9,4 +9,20 @@ public class Commande {
         this.quantite = quantite;
         this.prixTotal = prixTotal;
     }
+
+    public int getQuantite() {
+        return quantite;
+    }
+
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
+
+    public double getPrixTotal() {
+        return prixTotal;
+    }
+
+    public void setPrixTotal(double prixTotal) {
+        this.prixTotal = prixTotal;
+    }
 }
