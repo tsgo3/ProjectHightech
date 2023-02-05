@@ -23,6 +23,12 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
     implementation 'mysql:mysql-connector-java:8.0.21'
+    //implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '9.0.44'
+    //implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.44'
+    //implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-logging-juli', version: '9.0.44'
+
+    implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
 }
 
 application {
